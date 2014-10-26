@@ -24,7 +24,7 @@ from time import ctime, sleep
 
 #---------------Output---------------#
 
-output = [ 'User', 'Hostname', 'Distro', 'Kernel', 'Uptime', 'WindowManager', 'DesktopEnvironment', 'Shell', 'Terminal', 'Packages', 'CPU', 'RAM', 'Disk' ] 
+output = [ 'User', 'Hostname', 'Distro', 'Kernel', 'Uptime', 'WindowManager', 'Shell', 'Terminal', 'Packages', 'CPU', 'RAM', 'Disk' ] 
  
 #---------------Dictionaries---------------#
 
@@ -39,15 +39,6 @@ colorDict = {
 	'Clear': ['\x1b[0m']
 	}
 	
-deDict = {
-	'cinnamon-sessio': 'Cinnamon',
-	'gnome-session': 'GNOME',
-	'mate-session': 'MATE',
-	'ksmserver': 'KDE',
-	'xfce4-session': 'Xfce',
-	'lxsession': 'LXDE'
-	}
-
 wmDict = {
 	'awesome': 'Awesome',
 	'beryl': 'Beryl',
@@ -173,17 +164,6 @@ class WindowManager:
 		self.key = 'Window Manager'
 		self.value = wm
 			
-class DesktopEnvironment:
-	def __init__(self):
-		de = ''
-		for key in deDict.keys():
-			if key in processes:
-				de = deDict[key]
-				break
-					
-		self.key = 'Desktop Environment'
-		self.value = de
-			
 class Shell:
 	def __init__(self):
 		self.key = 'Shell'
@@ -247,7 +227,6 @@ classes = {
  'Kernel': Kernel,
  'Uptime': Uptime,
  'WindowManager': WindowManager,
- 'DesktopEnvironment': DesktopEnvironment,
  'Shell': Shell,
  'Terminal': Terminal,
  'Packages': Packages,
