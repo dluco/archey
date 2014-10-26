@@ -132,7 +132,7 @@ class Distro:
 			
 class Kernel:
 	def __init__(self):
-		kernel = Popen(['uname', '-r'], stdout=PIPE).communicate()[0].decode('Utf-8').rstrip('\n')
+		kernel = Popen(['uname', '-msr'], stdout=PIPE).communicate()[0].decode('Utf-8').rstrip('\n')
 		self.key = 'Kernel'
 		self.value = kernel
 			
