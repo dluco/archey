@@ -43,6 +43,7 @@ colorDict = {
 wmDict = {
 	'awesome': 'Awesome',
 	'beryl': 'Beryl',
+	'bspwm': 'Bspwm',
 	'blackbox': 'Blackbox',
 	'compiz': 'Compiz',
 	'dwm': 'DWM',
